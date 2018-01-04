@@ -1,0 +1,34 @@
+PCR Project
+-pyserial
+
+-find highest temp first (heated_lid) and add add 5 degrees
+	-make headed_lid global variable
+
+-stage 1: hot start
+	-before cycle, run at 95 degrees (variable) for 3 minutes (variable)
+	-single temp (variable) for set amount of time
+	-happens once, no repeats
+-stage 2: main stage
+	-will repeat
+	-be able to indicate how many times to repeat (the sequence will repeat)
+	-inside stage, will be able to determine certain steps
+	-set either 3 or 6 steps
+	-2 parameters: termperature, amount of time
+-stage 3: final extension
+	-wrap up experiment
+	-happens once, no repeats
+	-set temperature, set amount of time
+	-similar to hot start
+	-all times, temps, and repeats will be variable
+
+-stage 4: hold
+	-set heated_lid to null
+	-after experiment is run, hold temperature (cold?) until further notice
+	-create counter, if counter reaches certain number, stop
+	-may need to think of this
+
+
+-touch screen compatible?
+-no temps above 110 degrees
+-create from template with default temperatures that user can adjust
+-ability to save and store programs with text
