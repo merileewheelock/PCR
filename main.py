@@ -1,6 +1,5 @@
 # For now, to be run in the terminal
 
-
 # GLOBAL VARIABLES
 temps_list = []
 
