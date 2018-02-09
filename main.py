@@ -1,4 +1,5 @@
 # For now, to be run in the terminal
+# Initial python code without arduino connection
 
 # GLOBAL VARIABLES
 temps_list = []
