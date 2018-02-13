@@ -15,7 +15,7 @@ temps_list = []
 # stage 1: hot start
 
 hot_start_bool = raw_input("Will there be a hot start stage? (Y/N) ")
-if hot_start_bool == "Y":
+if hot_start_bool == "Y" or "y":
     hot_start_temp = int(raw_input("What will be the hot start temperature (C)? "))
     hot_start_lid_temp = hot_start_temp + 5
     hot_start_runtime = int(raw_input("What will be the hot start runtime (seconds)? "))
@@ -60,6 +60,7 @@ elif num_of_steps == 6:
     heated_lid = max(temps_list) + 5
     main_stage = (cycles, heated_lid, step_1_temp, step_1_runtime, step_2_temp, step_2_runtime, step_3_temp, step_3_runtime, step_4_temp, step_4_runtime, step_5_temp, step_5_runtime, step_6_temp, step_6_runtime)
 
+# These are the arrays to send back to arduino
 print hot_start
 print main_stage
 
