@@ -13,6 +13,8 @@ while (Serial.available()){
   data = Serial.read();
 }
 
+//Serial.print(data);
+
 if (data == '1')
 digitalWrite (LED_BUILTIN, HIGH);
 
