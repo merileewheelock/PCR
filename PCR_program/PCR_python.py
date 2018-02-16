@@ -40,7 +40,7 @@ if num_of_steps == 3:
     step_3_runtime = int(raw_input("What is the runtime at step 3 (seconds)? "))
     temps_list.extend([step_1_temp, step_2_temp, step_3_temp])
     heated_lid = max(temps_list) + 5
-    main_stage = (cycles, heated_lid, step_1_temp, step_1_runtime, step_2_temp, step_2_runtime, step_3_temp, step_3_runtime)
+    main_stage = cycles,heated_lid,step_1_temp,step_1_runtime,step_2_temp,step_2_runtime,step_3_temp,step_3_runtime
 
 elif num_of_steps == 6:
     cycles = int(raw_input("How many cycles or repeats? "))
@@ -58,11 +58,15 @@ elif num_of_steps == 6:
     step_6_runtime = int(raw_input("What is the runtime at step 6 (seconds)? "))
     temps_list.extend([step_1_temp, step_2_temp, step_3_temp, step_4_temp, step_5_temp, step_6_temp])
     heated_lid = max(temps_list) + 5
-    main_stage = (cycles, heated_lid, step_1_temp, step_1_runtime, step_2_temp, step_2_runtime, step_3_temp, step_3_runtime, step_4_temp, step_4_runtime, step_5_temp, step_5_runtime, step_6_temp, step_6_runtime)
+    main_stage = cycles,heated_lid,step_1_temp,step_1_runtime,step_2_temp,step_2_runtime,step_3_temp,step_3_runtime,step_4_temp,step_4_runtime,step_5_temp,step_5_runtime,step_6_temp,step_6_runtime
 
 # These are the arrays to send back to arduino
 print hot_start
 print main_stage
+print hot_start + main_stage
+main_stage_string = str(main_stage)
 
-ArduinoSerial.write('1') #send 1
+ArduinoSerial.write(main_stage_string) #send 1
 # Temporary solution to confirm python is communicating with arduino
+
+print ArduinoSerial.readline()
