@@ -12,6 +12,7 @@ print ("Enter PCR specs. Once complete, LED will turn on.")
 # GLOBAL VARIABLES
 temps_list = []
 
+
 # stage 1: hot start
 
 hot_start_bool = raw_input("Will there be a hot start stage? (Y/N) ")
